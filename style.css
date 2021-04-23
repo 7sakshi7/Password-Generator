@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(50, 39, 102);
+}
+
+#container {
+    position: absolute;
+    width: 470px;
+    height: 530px;
+    background: rgba(13, 5, 49, 0.815);
+    transform: translate(102%, 30%);
+    box-shadow: 0px 0px 15px 16px rgb(80, 69, 133);
+    /* border: 2px solid wheat; */
+}
+
+h1 {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+}
+
+#output {
+    top: 4.7rem;
+    left: 2rem;
+    background: black;
+    width: 400px;
+    height: 59px;
+    position: absolute;
+    border: 2px solid white;
+    box-shadow: 0px 0px 15px 6px rgb(6, 6, 36);
+}
+
+#output h3 {
+    color: white;
+    text-align: center;
+    top: 1.18rem;
+    position: relative;
+}
+
+#length,
+#upper,
+#lower,
+#special {
+    /* border: 2px solid white; */
+    height: 50px;
+    position: relative;
+    top: 6rem;
+}
+
+#upper {
+    top: 0rem;
+}
+
+#lower {
+    top: 0.2rem;
+}
+
+#digits {
+    /* border: 2px solid white; */
+    top: 0rem;
+    height: 50px;
+}
+
+#special {
+    /* border: 2px solid white; */
+    top: 0rem;
+}
+
+input[type="number"] {
+    width: 10%;
+    position: relative;
+    left: 12rem;
+    top: 0.65rem;
+    height: 42%;
+}
+
+#upper input[type="checkbox"] {
+    position: absolute;
+    left: 25rem;
+    top: 0.5rem;
+
+}
+#lower input[type="checkbox"] {
+    position: absolute;
+    left: 25rem;
+    top: 0.5rem;
+
+}
+#digits input[type="checkbox"] {
+    position: absolute;
+    left: 25rem;
+    top: 7.2rem;
+
+}
+#special input[type="checkbox"] {
+    position: absolute;
+    left: 25rem;
+    top: 0.9rem;
+
+}
+
+label {
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    position: relative;
+    top: 0.7rem;
+    left: 2rem;
+}
+
+#options {
+    /* border: 2px solid white; */
+    height: 230px;
+    position: relative;
+    top: 6.2rem;
+
+}
+
+#btn {
+    position: relative;
+    top: 6.3rem;
+    width: 53%;
+    height: 10%;
+    font-size: 20px;
+    left: 7rem;
+    border-radius: 43px;
+    outline: 0;
+    border: 0;
+    font-weight: bold;
+    background: rgb(144 126 229);
+    cursor: pointer;
+}
