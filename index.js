@@ -26,7 +26,7 @@ function generatepswd(){
     document.getElementById('content').innerText="";
     let length  = document.getElementById('p-length').value;
     if(length=="" ){
-        alert(" Kindly Select the   length ");
+        alert(" Kindly Select the length ");
     }
     if(length<1){
         alert("invalid length ");
@@ -70,24 +70,24 @@ function generatepswd(){
             console.log(select);
             if(distinct!=4){
                 if(upper==0 && select == 1){
-                    select = (select+1)%4;
+                    select = (select)%4+1;
                     if(select==0)
-                    select = (select+1)%4;
+                    select = (select)%4+1;
                 }
                 if(lower==0 && select == 2){
-                    select = (select+1)%4;
+                    select = (select)%4 +1;
                     if(select==0)
-                    select = (select+1)%4;
+                    select = (select)%4 +1;
                 }
                 if(digit==0 && select == 3){
-                    select = (select+1)%4;
+                    select = (select)%4+1;
                     if(select==0)
-                    select = (select+1)%4;
+                    select = (select)%4+1;
                 }
                 if(special==0 && select == 4){
-                    select = (select+1)%4;
+                    select = (select)%4+1;
                     if(select==0)
-                    select = (select+1)%4;
+                    select = (select)%4+1;
                 }
                 
             }
