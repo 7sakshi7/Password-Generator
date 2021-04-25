@@ -114,10 +114,143 @@ function generatepswd(){
                 let text = document.getElementById('content').innerText;
                 text+= getspecial();
                 document.getElementById('content').innerText=text;
-
             }
             
         }
+        let text = document.getElementById('content').innerText;
+        let u=[],l=[],d=[],s=[];
+        for(let i=0;i<text.length;i++){
+            if(charCodeAt(text[i])>=65 && charCodeAt(text[i])<=90)
+            u.push(i);
+            else if(charCodeAt(text[i])>=96 && charCodeAt(text[i])<=121)
+            l.push(i);
+            else if(charCodeAt(text[i])>=48 && charCodeAt(text[i])<57)
+            d.push(i);
+            else 
+            s.push(i);
+        }
+         // for checking uppercase letter
+        if(upper==1 && u.length==0){
+            let text = document.getElementById('content').innerText;
+            if(text.length!=length){
+               while(text.length!=length){
+                text+= getcapital();
+                document.getElementById('content').innerText=text;
+                let text = document.getElementById('content').innerText;
+               }
+            }
+            else{
+                let i = l.length;
+                let j = d.length;
+                let k = s.length;
+                if(max(i,max(j,k))==i){
+                    text[l[0]]=getcapital();
+                    document.getElementById('content').innerText=text;
+                }
+                else if(max(i,max(j,k))==j){
+                    text[d[0]]=getcapital();
+                    document.getElementById('content').innerText=text;
+                }
+                else if(max(i,max(j,k))==k){
+                    text[s[0]]=getcapital();
+                    document.getElementById('content').innerText=text;
+                }
+
+            }
+
+        }
+       
+        // for checking lowercase letter
+         if(lower==1 && l.length==0){
+            let text = document.getElementById('content').innerText;
+            if(text.length!=length){
+               while(text.length!=length){
+                text+= getsmall();
+                document.getElementById('content').innerText=text;
+                let text = document.getElementById('content').innerText;
+               }
+            }
+            else{
+                let i = u.length;
+                let j = d.length;
+                let k = s.length;
+                if(max(i,max(j,k))==i){
+                    text[l[0]]=getsmall();
+                    document.getElementById('content').innerText=text;
+                }
+                else if(max(i,max(j,k))==j){
+                    text[d[0]]=getsmall();
+                    document.getElementById('content').innerText=text;
+                }
+                else if(max(i,max(j,k))==k){
+                    text[s[0]]=getsmall();
+                    document.getElementById('content').innerText=text;
+                }
+
+            }
+
+        }
+        // for cheecking digits
+         if(digit==1 && d.length==0){
+            let text = document.getElementById('content').innerText;
+            if(text.length!=length){
+               while(text.length!=length){
+                text+= getdigits();
+                document.getElementById('content').innerText=text;
+                let text = document.getElementById('content').innerText;
+               }
+            }
+            else{
+                let i = l.length;
+                let j = u.length;
+                let k = s.length;
+                if(max(i,max(j,k))==i){
+                    text[l[0]]=getdigits();
+                    document.getElementById('content').innerText=text;
+                }
+                else if(max(i,max(j,k))==j){
+                    text[d[0]]=getdigits();
+                    document.getElementById('content').innerText=text;
+                }
+                else if(max(i,max(j,k))==k){
+                    text[s[0]]=getdigits();
+                    document.getElementById('content').innerText=text;
+                }
+
+            }
+
+        }
+        // for checking special letters
+        if(special==1 && s.length==0){
+            let text = document.getElementById('content').innerText;
+            if(text.length!=length){
+               while(text.length!=length){
+                text+= getspecial();
+                document.getElementById('content').innerText=text;
+                let text = document.getElementById('content').innerText;
+               }
+            }
+            else{
+                let i = l.length;
+                let j = d.length;
+                let k = u.length;
+                if(max(i,max(j,k))==i){
+                    text[l[0]]=getspecial();
+                    document.getElementById('content').innerText=text;
+                }
+                else if(max(i,max(j,k))==j){
+                    text[d[0]]=getspecial();
+                    document.getElementById('content').innerText=text;
+                }
+                else if(max(i,max(j,k))==k){
+                    text[s[0]]=getspecial();
+                    document.getElementById('content').innerText=text;
+                }
+
+            }
+
+        }
+        
 
     }
 }
